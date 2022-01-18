@@ -1,0 +1,15 @@
+# This file holds the default values to be inserted into environment in case the variables
+# dont exist.
+
+
+# Environment
+ENV: local
+
+# Zattoo web server parameters
+HOST: 0.0.0.0
+PORT: 8081
+DEBUG: true
+ZATTOO_MAIN_URL: http://localhost:8081
+
+# Postgresql parameters
+POSTGRES_ZATTOO_READ_WRITE: postgresql+psycopg2://postgres:postgres@localhost/zattoo
