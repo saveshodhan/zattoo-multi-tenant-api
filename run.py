@@ -21,5 +21,5 @@ def web_config():
     }
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     uvicorn.run("run:app", **web_config())

@@ -1,7 +1,5 @@
 """Test cases for tenants."""
 
-from app.schemas import tenant_schemas
-from app.crud.crud_tenants import add_single_tenant
 from app.models.models import Tenant
 from app.schemas.tenant_schemas import TenantDetailedSchema
 
@@ -27,7 +25,7 @@ class TestTenantRoutes:
 
         response = test_app.post("tenants", json=_data["test_data"][0])
         assert response.status_code == 501, response.text
-        assert response.json() == {"detail":"Not implemented"}
+        assert response.json() == {"detail": "Not implemented"}
 
     def test_get_all_tenants(self, test_app, mock_db):
         """Test all tenants response."""
@@ -49,11 +47,10 @@ class TestTenantRoutes:
         """Update an tenant."""
         response = test_app.put("tenants/1", json={"tenant_info": {"foo": "bar"}})
         assert response.status_code == 501, response.text
-        assert response.json() == {"detail":"Not implemented"}
+        assert response.json() == {"detail": "Not implemented"}
 
     def test_delete_tenant(self, test_app):
         """Delete an tenant."""
-        response = test_app.delete(f"tenants/1")
+        response = test_app.delete("tenants/1")
         assert response.status_code == 501, response.text
-        assert response.json() == {"detail":"Not implemented"}
-
+        assert response.json() == {"detail": "Not implemented"}
