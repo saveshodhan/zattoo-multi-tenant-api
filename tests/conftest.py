@@ -13,7 +13,26 @@ from config import current_config as CC
 @pytest.fixture(scope="session")
 def _data():
     """Create a fixture to store data to be moved across tests."""
-    yield {}
+    yield {
+        "test_data": [
+            {
+                "tenant_id": "1_Jacklyn91",
+                "tenant_info": {
+                    "email": "keaton_schuster33@hotmail.com",
+                    "address": "30261 Tania Track, Kossside, 24443, Angola",
+                    "description": "Velit delectus non."
+                }
+            },
+            {
+                "tenant_id": "2_Jasmin.Mann34",
+                "tenant_info": {
+                    "email": "audra.parisian@hotmail.com",
+                    "address": "418 Kellen Corners, North Harrymouth, 25205-3294, Liechtenstein",
+                    "description": "Itaque eaque et illum."
+                }
+            },
+        ]
+    }
 
 
 @pytest.fixture(scope="session")

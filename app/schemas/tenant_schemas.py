@@ -8,8 +8,6 @@ from pydantic import BaseModel
 class TenantBaseSchema(BaseModel):
     """Base schema for Tenant."""
 
-    tenant_id: str
-
     class Config:
         """Config."""
 
@@ -22,10 +20,10 @@ class TenantSchema(TenantBaseSchema):
     Mostly used to get all tenants, with minimum data.
     """
 
-    pass
+    tenant_id: str
 
 
-class TenantDetailedSchema(TenantBaseSchema):
+class TenantDetailedSchema(TenantSchema):
     """Schema to GET details of Tenant.
 
     Mostly to get details of a single tenant, hence has most of the info.
