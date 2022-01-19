@@ -20,6 +20,16 @@ expecto:
 #    @echo PONG2 $(NOW) $(FOO)
 
 
+# assuming venv is activated
+env:
+	pip install -r requirements.txt
+
+
+# install more packages required for development
+devenv: env
+	pip install -r requirements-dev.txt
+
+
 flake8:
 	git diff --unified=0 origin/main..HEAD | flake8 \
 		--count \
