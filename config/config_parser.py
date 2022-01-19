@@ -14,6 +14,7 @@ DEFAULT_CONFIG_FILE = f"{BASE_DIR}/{YAML_FILE}"
 parser = ArgParser(
     config_file_parser_class=YAMLConfigFileParser,
     default_config_files=[DEFAULT_CONFIG_FILE],
+    auto_env_var_prefix="",
 )
 
 # Environment
