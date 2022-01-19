@@ -51,5 +51,10 @@ test:
 	-rA \
 	tests/
 
+
+dummydata:
+	python -m dummy_data.make_dummy_data
+
+
 run:
 	ZATTOO_HTTP_BEARER_TOKEN=expectopatronum python run.py

@@ -3,8 +3,8 @@
 import json
 from pathlib import Path
 
-from app.db.init_db import DBUtils
 from app.models.models import Tenant
+from common.db_utils import DBUtils
 from config import current_config as CC
 
 

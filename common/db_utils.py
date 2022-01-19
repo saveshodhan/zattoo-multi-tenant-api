@@ -1,4 +1,4 @@
-"""Initialise the database."""
+"""Database related utils."""
 
 from urllib.parse import urlparse
 

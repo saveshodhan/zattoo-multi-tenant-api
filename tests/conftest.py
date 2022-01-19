@@ -6,7 +6,7 @@ from testing.postgresql import Postgresql as TestPostgresql
 
 from app.api.api_v1.main import app, ROUTE_PREFIX
 from app.api.deps import get_db
-from app.db.init_db import DBUtils
+from common.db_utils import DBUtils
 from config import current_config as CC
 
 
