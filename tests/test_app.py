@@ -18,7 +18,7 @@ class TestAuth:
     def test_bad_auth_token(self, test_app):
         """Test authorization by passing bad token."""
         response = test_app.get("tenants/1", headers={"Authorization": "Bearer youcanseeme"})
-        assert response.status_code == 402
+        assert response.status_code == 401
         assert response.json() == {"detail": "Not authenticated"}
 
     def test_no_auth_token(self, test_app):
