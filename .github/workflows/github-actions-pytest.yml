@@ -1,6 +1,6 @@
-name: Pytest
+name: CodeChecks
 
-on: push
+on: [push, pull_request]
 
 jobs:
     test:
@@ -22,3 +22,10 @@ jobs:
         - name: Run pytest
           run: |
               make test
+        - name: Upload to codecov
+          uses: codecov/codecov-action@v2
+          with:
+              token: ${{ secrets.CODECOV_TOKEN }}
+              directory: ./
+              files: ./coverage.xml
+              verbose: true

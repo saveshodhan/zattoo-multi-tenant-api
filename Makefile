@@ -44,8 +44,9 @@ flake8:
 
 test:
 	pytest \
-	--cov . \
+	--cov ./ \
 	--cov-report term-missing \
+	--cov-report=xml \
 	--cov-branch \
 	-vvv \
 	-rA \
