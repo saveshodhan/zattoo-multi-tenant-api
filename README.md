@@ -1,6 +1,9 @@
 # Zattoo multi-tenant API
 > This is an API implementation for Zattoo's multi-tenant platform.
 
+[![CodeChecks](https://github.com/saveshodhan/zattoo-multi-tenant-api/actions/workflows/github-actions-pytest.yml/badge.svg)](https://github.com/saveshodhan/zattoo-multi-tenant-api/actions?query=workflow%3ACodeChecks)
+[![codecov](https://codecov.io/gh/saveshodhan/zattoo-multi-tenant-api/branch/main/graph/badge.svg?token=IZ0ZRWK68Z)](https://codecov.io/gh/saveshodhan/zattoo-multi-tenant-api)
+
 ### System requirements
 This app needs the below to be present on the system:
 - `Python 3`
@@ -22,7 +25,8 @@ This app needs the below to be present on the system:
 5. Run the app using `make run`.
 6. **[Only for dev purpose]** If you will be making any changes, you can use the below utilities
    - Run `make test` to run pytest based test cases.
-   - run `make flake8` to run flake8 check (runs on a diff with `main` branch)
+   - Run `make flake8` to run flake8 check (runs on a diff with `main` branch)
+   - These are also configured in CI
 
 ### Tech stack
 - Python
