@@ -1,0 +1,31 @@
+name: CodeChecks
+
+on: [push, pull_request]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v2
+        - name: Set up Python 3.8
+          uses: actions/setup-python@v2
+          with:
+              python-version: "3.8"
+        - name: Install dependencies
+          run: |
+              python -m pip install --upgrade pip
+              make devenv
+        - name: Run flake8
+          run: |
+              make flake8
+        - name: Run pytest
+          run: |
+              make test
+        - name: Upload to codecov
+          uses: codecov/codecov-action@v2
+          with:
+              token: ${{ secrets.CODECOV_TOKEN }}
+              directory: ./
+              files: ./coverage.xml
+              verbose: true
