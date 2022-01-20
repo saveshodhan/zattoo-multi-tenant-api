@@ -23,7 +23,8 @@ This app needs the below to be present on the system:
 4. Once the database is setup, make sure to set a convenient value for `idle_in_transaction_session_timeout`.
    - For development purposes, you can set it to `0` which will make sure that the transactions don't timeout - `alter database zattoo set idle_in_transaction_session_timeout = 0`.
 5. Run the app using `make run`.
-6. **[Only for dev purpose]** If you will be making any changes, you can use the below utilities
+6. Go to http://localhost:8081/docs to check the Swagger UI.
+7. **[Only for dev purpose]** If you will be making any changes, you can use the below utilities
    - Run `make test` to run pytest based test cases.
    - Run `make flake8` to run flake8 check (runs on a diff with `main` branch)
    - These are also configured in CI
