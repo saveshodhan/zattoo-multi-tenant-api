@@ -57,6 +57,9 @@ In future if the app starts getting a lot of traffic, we can employ certain stra
 - Put the setup behind an LB
 - If there would be a POST / PUT / DELETE endpoint to add / update / delete a tenant, the actual work (especially database related) should be offloaded to a message queue like Kafka. This will reduce the latency on these endpoints. Of course you will have to live with [eventual consistency](https://martinfowler.com/articles/microservice-trade-offs.html#consistency)
 - Segregation of database connections as `READ_ONLY` and `READ_WRITE` with both of these on separate instances
+- Normalizing the database
+- Sharding the database (this should be the last option)
+- Caching of results (at the code level as well as in Redis)
 - Perform load testing of the endpoints
   - Can use `locust` for this
   - I did something similar in [loadtest_setup](https://github.com/saveshodhan/loadtest_setup)
