@@ -16,7 +16,7 @@ class Tenant(DeclarativeBase):
     __tablename__ = "tenant"
 
     tenant_number = Column(Integer, primary_key=True)
-    tenant_id = Column(String, nullable=False)
+    tenant_id = Column(String, index=True, nullable=False)
     tenant_info = Column(JSONB, default={})
     created_at = Column(DateTime, default=dt.now())
     updated_at = Column(DateTime, default=dt.now())
